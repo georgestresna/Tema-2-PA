@@ -25,7 +25,7 @@ Programul contine comentarii descriptive in linia de cod, iar funcția `main` a 
 
 Progresul proiectului poate fi urmărit pe GitHub, unde au fost încărcate 3 commit-uri de-a lungul întocmirii programului.
 
-### Dificultti intampinate
+## Dificultati intampinate
 
 1. Asemanator temei 1, cand 2 echipe dintr-un meci au scoruri egale, echipa castigatoare va fi cea luata descrescator in functie de nume, si nu crescator asa cum spune cerinta.
 2. La punctul 2 al temei, checker-ul a fost conceput sa compare scorul obtinut de echipe pentru o runda in plus decat ar fi in mod normal.
