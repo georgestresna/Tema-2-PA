@@ -1,15 +1,31 @@
-Tema 2 presupune simularea unui turneu/ campionat, tabela de scor fiind implementta cu ajutoarul unui graf orienat. fiecare muchie reprezinta un meci purtat intre 2 jucatori, adica varfurile grafului.
-Acest proces se repeta, iar graful va avea un numar de etape. Tema 2 presupune administrarea meciurilor, astfel incat din 32 de echipe din runda 1 vor ramane 16 in runda 2, 8 in runda 3, 4 in runda 4, 2 in runda a 5-a, adica finala.
-Altfel spus sunt 2^5 echipe, din care una singura ramane castigatoare.
-Tema contine 2 puncte, primul este discutat deasupra. Cea de-a doua cerinta calculeaza un scor bazat pe numarul de castiguri si importanta in turneu a echipei inamice. 
-Fiecare echipa va primi un scor, chiar si cele care nu au castigat niciun meci.
-Dupa dupa distribuirea puncelor se face un podium, output-ul din fisierul scor.
+# Simulare Turneu - Tema 2
 
-Programul contine un fisier main.c la care se ataseaza liste.c si grafuri.c, ce contin functiile standard pentru manipularea listelor si respectiv grafurilor.
-Legatura dintre fisierele .c o fac header-urile.
+Tema 2 presupune simularea unui turneu/campionat, unde tabela de scor este implementată cu ajutorul unui graf orientat. Fiecare muchie reprezintă un meci purtat între 2 jucători, adică vârfurile grafului. 
+Acest proces se repetă, iar graful va avea un număr de etape. 
 
-Am implementt o rezolvare cu o lista simplu inlantuita pentru a forma graful si clasamentul.
-Lista se parcurge pana ramane un singur jucator, "head"-ul listei.
-Pana atunci, lista se itereaza si pierzatorul este eliminat din lista, astfel si realizeaza acest turneu eliminatoriu pe nivele.
-Programul are comentrii pe cod, iar functia main a programului contine in mare parte apeluri catre functii exterioare.
-Progresul Proiectului poate fi urmarit pe Github, fiind incarcate 2 commit-uri dealungul intocmirii programului.
+Tema 2 presupune administrarea meciurilor astfel încât din 32 de echipe din runda 1 vor rămâne 16 în runda 2, 8 în runda 3, 4 în runda 4, 2 în runda a 5-a, adică finala. Altfel spus, sunt 2^5 echipe, din care una singură rămâne câștigătoare.
+
+## Cerințe
+
+Tema conține 2 puncte:
+1. Simularea turneului, descrisă mai sus.
+2. Calcularea unui scor bazat pe numărul de victorii și importanța în turneu a echipei inamice. Fiecare echipă va primi un scor, chiar și cele care nu au câștigat niciun meci. 
+După distribuirea punctelor se face un podium, output-ul fiind în fișierul `scor`.
+
+## Implementare
+
+Programul conține un fișier `main.c`, la care se atașează `liste.c` și `grafuri.c`, care conțin funcțiile standard pentru manipularea listelor și respectiv grafurilor. Legătura dintre fișierele `.c` este realizată prin headere.
+
+Implementarea folosește o rezolvare cu o listă simplu înlănțuită pentru a forma graful și clasamentul. Lista se parcurge cu un loop while in interiorul unui altuia, până rămâne un singur jucător, "head"-ul listei. 
+While-ul din interior efectueaza eliminarile dintr-o runa, iar cel exterior repeta operatia pana cand se afla castigatorul, realizându-se astfel un turneu eliminatoriu pe nivele.
+
+Programul contine comentarii descriptive in linia de cod, iar funcția `main` a programului conține în mare parte apeluri către funcții externe.
+
+## Progresul Proiectului
+
+Progresul proiectului poate fi urmărit pe GitHub, unde au fost încărcate 3 commit-uri de-a lungul întocmirii programului.
+
+### Dificultti intampinate
+
+1. Asemanator temei 1, cand 2 echipe dintr-un meci au scoruri egale, echipa castigatoare va fi cea luata descrescator in functie de nume, si nu crescator asa cum spune cerinta.
+2. La punctul 2 al temei, checker-ul a fost conceput sa compare scorul obtinut de echipe pentru o runda in plus decat ar fi in mod normal.
